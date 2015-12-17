@@ -84,7 +84,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
 
-        bg = new Background(BitmapFactory.decodeResource(getResources(), R.drawable.graybg));
+        bg = new Background(BitmapFactory.decodeResource(getResources(), R.drawable.blackbg));
         //this is where the ufo image is used for the animation, it is divided into 3 parts,
         //length of part is 66, width 40 pixels
         player = new Player(BitmapFactory.decodeResource(getResources(), R.drawable.ufo), 66, 40, 3);
@@ -201,6 +201,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
                     missiles.remove(i);
                     break;
                 }
+
             }
 
             //add smoke puffs on timer

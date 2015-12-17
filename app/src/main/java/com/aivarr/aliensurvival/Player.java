@@ -12,6 +12,7 @@ public class Player extends GameObject{
     private long startTime;
 
     public Player(Bitmap res, int w, int h, int numFrames){
+        //starting position of the ufo
         x = 100;
         y = GamePanel.HEIGHT/2;
         dy = 0;
