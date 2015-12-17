@@ -207,7 +207,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
             //add smoke puffs on timer
             long elapsed = (System.nanoTime() - smokeStartTime) / 1000000;
             if (elapsed > 120) {
-                smoke.add(new Smokepuff(player.getX(), player.getY() + 10));
+                smoke.add(new Smokepuff(player.getX(), player.getY() + 20));
                 smokeStartTime = System.nanoTime();
             }
 
@@ -386,7 +386,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
 
         //initial top border
         for (int i = 0; i * 20 < WIDTH + 40; i++) {
-            //first top border create
+            //creates first top border
             if (i == 0) {
                 topborder.add(new TopBorder(BitmapFactory.decodeResource(getResources(), R.drawable.tspwall
                 ), i * 20, 0, 10));
